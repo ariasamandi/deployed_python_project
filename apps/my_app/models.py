@@ -58,7 +58,7 @@ class User(models.Model):
 class Post(models.Model):
     caption = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images')
-    image_thumbnail = ImageSpecField(source='image',processors=[ResizeToFill(350, 200)], format='JPEG', options={'quality': 60})
+    # image_thumbnail = ImageSpecField(source='image',processors=[ResizeToFill(350, 200)], format='JPEG', options={'quality': 60})
     posted_by = models.ForeignKey(User, related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

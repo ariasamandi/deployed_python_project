@@ -23,7 +23,7 @@
             {% for photos in photo %}
                 {% if photos.image %}
                     <h3 id="caption">{{photos.caption}}</h3>
-                    <img src="{{photos.image_thumbnail.url}}">
+                    <img src="{{photos.image.url}}" style="width: 300px; height: 200px;">
                     <a class="remove" href="/remove/post/{{photos.id}}">remove</a>
                 {% endif %}
             {% endfor %}
